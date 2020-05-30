@@ -1,0 +1,87 @@
+body, #root {
+  /* margin: 0; */
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F6F6F6;
+}
+
+.loader-container{
+  margin-top: 1%;
+  text-align: center;
+}
+
+.main-logo{
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+.searchCard{
+  width: 30rem;
+  margin: auto;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ant-radio-group {
+  width: 100%;
+}
+
+.ant-radio-button-wrapper {
+  width: 25%;
+  text-align: center;
+}
+
+.ant-card-body {
+  padding: 12px;
+}
+
+.ant-input{
+  border-radius: 4px;
+}
+
+.ant-form-item{
+  margin-bottom: 6px;
+}
+
+.ant-input:focus, .ant-input-focused {
+  border-color: #222C81;
+
+}
+
+.ant-input:hover {
+  border-color: #222C81;
+  border-right-width: 1px !important;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  z-index: 1;
+  color: #222C81;
+  background: #fff;
+  border-color: #222C81;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+  border-color: #222C81;
+}
+
+.ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
+  border-right-color: #222C81;
+  border-left-color: #222C81;
+}
+
+.ant-radio-button-wrapper:hover {
+  position: relative;
+  color: #222C81;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  color: #222C81;
+  border-color: #222C81;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+  color: #222C81;
+  border-color: #222C81;
+}
