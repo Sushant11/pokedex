@@ -2,14 +2,21 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import pokedexService from '../../services/pokedexService'
+import * as pokedexService from '../../services/pokedexService'
 import * as pokedexAction from '../../actions/pokedexAction'
 import Home from '../../components/Home';
 
 export class HomeContainer extends React.Component {
+
+    fetchPokedex = () => {
+        this.props.actions.fetchPokedex()
+    };
+
     render() {
         return (
-            <Home />
+            <Home
+                fetchPokedex={this.fetchPokedex}
+            />
         )
     }
 }

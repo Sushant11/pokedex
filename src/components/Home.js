@@ -1,15 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 
 import logo from '../assets/pokedex-logo.png'
 import Search from './Search'
 
-const Home = () => {
+const Home = props => {
+    const { fetchPokedex, pokedex, pokedexErrors, pokedexLoading } = props;
+
+    useEffect(() => {
+        fetchPokedex();
+    }, [])
+
     return (
         <Fragment>
             <div className="main-logo">
-                <img src={logo} alt="Pokedex"/>
+                <img src={logo} alt="Pokedex" />
             </div>
-           <Search/>
+            <Search />
         </Fragment>
     );
 };

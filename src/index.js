@@ -12,6 +12,7 @@ import rootReducer from "./reducers";
 
 import "antd/dist/antd.css";
 import "./styles/App.css";
+import "./styles/normalize.css";
 import * as serviceWorker from "./serviceWorker";
 
 const store = createStore(rootReducer, composeWithDevTools(
