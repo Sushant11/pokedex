@@ -1,4 +1,4 @@
-import { pokedexFetchRequest, pokedexFetchRequestSuccess, pokedexFetchRequestfailure } from "../actions/pokedexAction"
+import { pokedexFetchRequest, pokedexFetchRequestSuccess, pokedexFetchRequestfailure, pokedexDetailFetchRequest, pokedexDetailFetchRequestSuccess, pokedexDetailFetchRequestfailure } from "../actions/pokedexAction"
 
 export const fetchPokedex = () => {
     return dispatch => {
@@ -14,5 +14,23 @@ export const fetchPokedex = () => {
                 }
             })
             .catch(error => dispatch(pokedexFetchRequestfailure(error.data.data)))
+    }
+}
+
+export const fetchPokedexDetail = (url) => {
+    return dispatch => {
+        dispatch(pokedexDetailFetchRequest());
+        return fetch(url)
+            .then(response => response.json())
+            .then(response => {
+                if (response) {
+                    dispatch(pokedexDetailFetchRequestSuccess(response))
+                }
+                else {
+                    //
+                    console.log('Error :>>');
+                }
+            })
+            .catch(error => dispatch(pokedexDetailFetchRequestfailure(error.data.data)))
     }
 }

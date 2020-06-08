@@ -77,3 +77,12 @@
   color: #222c81;
   border-color: #222c81;
 }
+
+.ant-divider-horizontal {
+  display: -ms-flexbox;
+  display: flex;
+  clear: both;
+  width: 100%;
+  min-width: 100%;
+  margin: 8px 0;
+}

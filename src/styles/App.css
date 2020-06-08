@@ -1,31 +1,73 @@
-body, #root {
+body,
+#root {
   /* margin: 0; */
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 
-.loader-container{
+.loader-container {
   margin-top: 1%;
   text-align: center;
 }
 
-.main-logo{
+.main-logo {
   text-align: center;
   padding: 2rem 0 1rem 0;
 }
 
-.searchCard{
+.searchCard {
   width: 30rem;
   margin: auto;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.poke-btn ,.poke-btn:hover, .poke-btn:focus {
+.poke-btn,
+.poke-btn:hover,
+.poke-btn:focus {
   color: #40a9ff;
   background-color: #fff;
   border-color: #ffffff;
+}
+
+.main {
+  margin: 1rem 3rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.poke-card {
+  margin: 12px;
+  box-shadow: 0px 2px 4px hsla(0, 0%, 0%, 0.2);
+  text-align: center;
+  border-radius: 5px !important;
+}
+
+.poke-card:hover {
+  box-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.1);
+}
+
+.pokeName {
+  margin-bottom: 0em;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.spin {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #bbbbbb;
+  text-align: center;
 }

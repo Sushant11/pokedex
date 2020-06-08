@@ -4,7 +4,8 @@ import {
     POKEDEX_FETCH_REQUEST_FAILURE,
     POKEDEX_DETAIL_FETCH_REQUEST,
     POKEDEX_DETAIL_FETCH_REQUEST_SUCCESS,
-    POKEDEX_DETAIL_FETCH_REQUEST_FAILURE
+    POKEDEX_DETAIL_FETCH_REQUEST_FAILURE,
+    POKEDEX_ARRAY_STORE_REQUEST,
 } from "../constants/actionTypes"
 
 export const pokedexFetchRequest = () => {
@@ -47,3 +48,9 @@ export const pokedexDetailFetchRequestfailure = data => {
     }
 }
 
+export const pokedexArrayStoreRequest = data => {
+    return {
+        type: POKEDEX_ARRAY_STORE_REQUEST,
+        data,
+    }
+}

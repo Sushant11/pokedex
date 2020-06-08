@@ -25,10 +25,10 @@ ReactDOM.render(
       fallback={
         <div className="loader-container">
           <LoadingOutlined
-            style={{ fontSize: 24, color: "black", marginTop: "2rem" }}
+            style={{ fontSize: 24, color: "#222c81", marginTop: "2rem" }}
             spin
           />
-          <div>Loading...</div>
+          <div>Catching...</div>
         </div>
       }
     >
