@@ -11,6 +11,7 @@ import {
     POKEDEX_ARRAY_STORE_REQUEST,
     POKEDEX_CLEAN_REQUEST,
     POKEDEX_DETAIL_CLEAN_REQUEST,
+    POKEDEX_ARRAY_CLEAN_REQUEST,
 } from "../constants/actionTypes"
 
 export const pokedexFetchRequest = () => {
@@ -26,10 +27,10 @@ export const pokedexFetchRequestSuccess = data => {
     }
 }
 
-export const pokedexFetchRequestFailure = data => {
+export const pokedexFetchRequestFailure = error => {
     return {
         type: POKEDEX_FETCH_REQUEST_FAILURE,
-        data,
+        error,
     }
 }
 
@@ -46,10 +47,10 @@ export const pokedexSearchFetchRequestSuccess = data => {
     }
 }
 
-export const pokedexSearchFetchRequestFailure = data => {
+export const pokedexSearchFetchRequestFailure = error => {
     return {
         type: POKEDEX_SEARCH_FETCH_REQUEST_FAILURE,
-        data,
+        error,
     }
 }
 
@@ -66,15 +67,14 @@ export const pokedexDetailFetchRequestSuccess = data => {
     }
 }
 
-export const pokedexDetailFetchRequestFailure = data => {
+export const pokedexDetailFetchRequestFailure = error => {
     return {
         type: POKEDEX_DETAIL_FETCH_REQUEST_FAILURE,
-        data,
+        error,
     }
 }
 
 export const pokedexArrayStoreRequest = data => {
-    console.log('data :>> ', data);
     return {
         type: POKEDEX_ARRAY_STORE_REQUEST,
         data,
@@ -89,5 +89,11 @@ export const pokedexCleanRequest = () => {
 export const pokedexDetailCleanRequest = () => {
     return {
         type: POKEDEX_DETAIL_CLEAN_REQUEST,
+    }
+}
+
+export const pokedexArrayCleanRequest = () => {
+    return {
+        type: POKEDEX_ARRAY_CLEAN_REQUEST,
     }
 }

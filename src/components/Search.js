@@ -13,11 +13,12 @@ const PokeballIcon = props => <Icon component={pokeSvg} {...props} />
 
 
 const Search = (props) => {
-    const {searchPokedex, cleanPokedex, cleanPokedexDetail} = props
+    const {searchPokedex, cleanPokedex, cleanPokedexArray} = props
+    console.log('props :>> ', props);
 
     const onFinish = (values) => {
         cleanPokedex();
-        cleanPokedexDetail();
+        cleanPokedexArray();
         searchPokedex(values)
     }
     return (
@@ -59,9 +60,9 @@ const Search = (props) => {
                 >
                     <Radio.Group >
                         <Radio.Button value="pokemon">Name</Radio.Button>
-                        <Radio.Button value="gender">Gender</Radio.Button>
-                        <Radio.Button value="pokemon-color">Color</Radio.Button>
-                        <Radio.Button value="pokemon-habitat">Habitat</Radio.Button>
+                        <Radio.Button value="gender" disabled>Gender</Radio.Button>
+                        <Radio.Button value="pokemon-color" disabled>Color</Radio.Button>
+                        <Radio.Button value="pokemon-habitat" disabled>Habitat</Radio.Button>
                     </Radio.Group>
                 </Form.Item>
             </Form>

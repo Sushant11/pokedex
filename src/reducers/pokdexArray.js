@@ -1,5 +1,6 @@
 import {
     POKEDEX_ARRAY_STORE_REQUEST,
+    POKEDEX_ARRAY_CLEAN_REQUEST,
 } from "../constants/actionTypes";
 
 const INITIAL_STATE = {
@@ -14,7 +15,12 @@ const pokedexArrayReducer = (state, action) => {
             return Object.assign({}, state, {
                 payload: action.data
             })
-          
+
+        case POKEDEX_ARRAY_CLEAN_REQUEST:
+            return Object.assign({}, state, {
+                payload: [],
+            })
+
         default:
             return state;
     }

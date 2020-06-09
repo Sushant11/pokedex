@@ -26,7 +26,6 @@ export const searchPokedex = (data) => {
             .then(response => response.json())
             .then(response => {
                 if (response) {
-                    console.log('response :>> ', response);
                     message.success('Fetched Sucessfully.');
                     dispatch(pokedexSearchFetchRequestSuccess(response))
                     // dispatch(pokedexDetailCleanRequest)
@@ -35,7 +34,7 @@ export const searchPokedex = (data) => {
                     message.warning('Please Try Again.');
                 }
             })
-            .catch(error => dispatch(pokedexSearchFetchRequestFailure(error.data.data)))
+            .catch( error => message.warning('Pokemon Not Found!'),5000)
     }
 }
 

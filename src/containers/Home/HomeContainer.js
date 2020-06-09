@@ -7,12 +7,12 @@ import * as pokedexAction from '../../actions/pokedexAction'
 import Home from '../../components/Home';
 
 export class HomeContainer extends React.Component {
-  
+
 
     fetchPokedex = () => {
         this.props.actions.fetchPokedex()
     };
-    
+
     searchPokedex = (data) => {
         this.props.actions.searchPokedex(data)
     };
@@ -20,19 +20,23 @@ export class HomeContainer extends React.Component {
     fetchPokedexDetail = url => {
         this.props.actions.fetchPokedexDetail(url)
     };
-    
+
     cleanPokedex = () => {
         this.props.actions.pokedexCleanRequest()
-    }; 
-    
+    };
+
     cleanPokedexDetail = () => {
         this.props.actions.pokedexDetailCleanRequest()
-    }; 
-    
+    };
+
+
     pokedexArrayStoreRequest = (data) => {
         this.props.actions.pokedexArrayStoreRequest(data)
     };
 
+    cleanPokedexArray = () => {
+        this.props.actions.pokedexArrayCleanRequest()
+    };
 
 
     render() {
@@ -42,6 +46,7 @@ export class HomeContainer extends React.Component {
                 searchPokedex={this.searchPokedex}
                 cleanPokedex={this.cleanPokedex}
                 cleanPokedexDetail={this.cleanPokedexDetail}
+                cleanPokedexArray={this.cleanPokedexArray}
                 fetchPokedexDetail={this.fetchPokedexDetail}
                 pokedexArrayStoreRequest={this.pokedexArrayStoreRequest}
                 {...this.props}
@@ -53,10 +58,10 @@ export class HomeContainer extends React.Component {
 const mapStateToProps = state => ({
     pokedexes: state.pokedexes.payload,
     pokedexErrors: state.pokedexes.errors,
-    pokedexLoading: state.pokedexes.loading, 
+    pokedexLoading: state.pokedexes.loading,
     pokedexSearches: state.pokedexSearches.payload,
     pokedexSearchErrors: state.pokedexSearches.errors,
-    pokedexSearchLoading: state.pokedexSearches.loading, 
+    pokedexSearchLoading: state.pokedexSearches.loading,
     pokedexDetails: state.pokedexDetails.payload,
     pokedexDetailErrors: state.pokedexDetails.errors,
     pokedexDetailLoading: state.pokedexDetails.loading,
