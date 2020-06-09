@@ -12,22 +12,38 @@ export class HomeContainer extends React.Component {
     fetchPokedex = () => {
         this.props.actions.fetchPokedex()
     };
+    
+    searchPokedex = (data) => {
+        this.props.actions.searchPokedex(data)
+    };
 
     fetchPokedexDetail = url => {
         this.props.actions.fetchPokedexDetail(url)
     };
-
-    pokedexList = data => {
-        console.log('data :>> ', data);
+    
+    cleanPokedex = () => {
+        this.props.actions.pokedexCleanRequest()
+    }; 
+    
+    cleanPokedexDetail = () => {
+        this.props.actions.pokedexDetailCleanRequest()
+    }; 
+    
+    pokedexArrayStoreRequest = (data) => {
         this.props.actions.pokedexArrayStoreRequest(data)
-    }
+    };
+
+
 
     render() {
         return (
             <Home
                 fetchPokedex={this.fetchPokedex}
+                searchPokedex={this.searchPokedex}
+                cleanPokedex={this.cleanPokedex}
+                cleanPokedexDetail={this.cleanPokedexDetail}
                 fetchPokedexDetail={this.fetchPokedexDetail}
-                pokedexList={this.pokedexList}
+                pokedexArrayStoreRequest={this.pokedexArrayStoreRequest}
                 {...this.props}
             />
         )
@@ -38,10 +54,13 @@ const mapStateToProps = state => ({
     pokedexes: state.pokedexes.payload,
     pokedexErrors: state.pokedexes.errors,
     pokedexLoading: state.pokedexes.loading, 
+    pokedexSearches: state.pokedexSearches.payload,
+    pokedexSearchErrors: state.pokedexSearches.errors,
+    pokedexSearchLoading: state.pokedexSearches.loading, 
     pokedexDetails: state.pokedexDetails.payload,
     pokedexDetailErrors: state.pokedexDetails.errors,
     pokedexDetailLoading: state.pokedexDetails.loading,
-    pokedexArray: state.pokedexArray.payload
+    pokedexArray: state.pokedexArray.payload,
 })
 
 const mapDispatchToProps = dispatch => {

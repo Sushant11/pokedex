@@ -20,7 +20,7 @@ const Home = props => {
             <div className="main-logo animate__animated animate__fadeIn">
                 <img src={logo} alt="Pokedex" />
             </div>
-            <Search />
+            <Search {...props} />
             {pokedexLoading ? <div className='spin'><Spin indicator={antIcon} /></div> : <Main {...props} />}
             <div className='footer'>
                  <span>POKEDEX 2020 © Sushant Chitrakar</span>

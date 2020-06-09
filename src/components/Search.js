@@ -12,13 +12,21 @@ const layout = {
 const PokeballIcon = props => <Icon component={pokeSvg} {...props} />
 
 
-const Search = () => {
+const Search = (props) => {
+    const {searchPokedex, cleanPokedex, cleanPokedexDetail} = props
+
+    const onFinish = (values) => {
+        cleanPokedex();
+        cleanPokedexDetail();
+        searchPokedex(values)
+    }
     return (
         <Card bordered='false' className='searchCard animate__animated animate__fadeIn animate__delay-1s'>
             <Form
                 {...layout}
                 name="basic"
                 placeholder="Search"
+                onFinish={onFinish}
                 initialValues={{
                     remember: true,
                 }}
@@ -28,7 +36,7 @@ const Search = () => {
                     rules={[
                         {
                             required: true,
-                            message: 'Enter Anything!',
+                            message: 'Empty! Please type something.',
                         },
                     ]}
                 >
@@ -42,7 +50,6 @@ const Search = () => {
 
                 <Form.Item
                     name="para"
-                    initialValue="a"
                     rules={[
                         {
                             required: true,
@@ -51,10 +58,10 @@ const Search = () => {
                     ]}
                 >
                     <Radio.Group >
-                        <Radio.Button value="a">Name</Radio.Button>
-                        <Radio.Button value="b">Gender</Radio.Button>
-                        <Radio.Button value="c">Color</Radio.Button>
-                        <Radio.Button value="d">Habitat</Radio.Button>
+                        <Radio.Button value="pokemon">Name</Radio.Button>
+                        <Radio.Button value="gender">Gender</Radio.Button>
+                        <Radio.Button value="pokemon-color">Color</Radio.Button>
+                        <Radio.Button value="pokemon-habitat">Habitat</Radio.Button>
                     </Radio.Group>
                 </Form.Item>
             </Form>

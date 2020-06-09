@@ -71,3 +71,21 @@ body,
   color: #bbbbbb;
   text-align: center;
 }
+
+.basicInfo{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats{
+  flex-grow: 1;
+}
+
+.type sup{
+  background-color: #52c41a;
+  margin: 0 5px;
+}
+
+.info{
+  margin: 10px;
+}

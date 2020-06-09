@@ -2,6 +2,7 @@ import {
     POKEDEX_DETAIL_FETCH_REQUEST,
     POKEDEX_DETAIL_FETCH_REQUEST_SUCCESS,
     POKEDEX_DETAIL_FETCH_REQUEST_FAILURE,
+    POKEDEX_DETAIL_CLEAN_REQUEST
 } from "../constants/actionTypes";
 
 const INITIAL_STATE = {
@@ -34,6 +35,12 @@ const pokedexDetailReducer = (state, action) => {
                 errors: action.error
             })
 
+        case POKEDEX_DETAIL_CLEAN_REQUEST:
+            return Object.assign({}, state, {
+                payload: [],
+                loading: false,
+                errors: {}
+            })
         default:
             return state;
     }

@@ -1,4 +1,5 @@
-import { pokedexFetchRequest, pokedexFetchRequestSuccess, pokedexFetchRequestfailure, pokedexDetailFetchRequest, pokedexDetailFetchRequestSuccess, pokedexDetailFetchRequestfailure } from "../actions/pokedexAction"
+import { pokedexSearchFetchRequest, pokedexSearchFetchRequestSuccess, pokedexSearchFetchRequestFailure,pokedexFetchRequest, pokedexFetchRequestSuccess, pokedexFetchRequestFailure, pokedexDetailFetchRequest, pokedexDetailFetchRequestSuccess, pokedexDetailFetchRequestFailure } from "../actions/pokedexAction"
+import { message } from 'antd';
 
 export const fetchPokedex = () => {
     return dispatch => {
@@ -7,13 +8,34 @@ export const fetchPokedex = () => {
             .then(response => response.json())
             .then(response => {
                 if (response) {
+                    message.success('Fetched Sucessfully.');
                     dispatch(pokedexFetchRequestSuccess(response.results))
                 }
                 else {
-                    //
+                    message.warning('Please Try Again.');
                 }
             })
-            .catch(error => dispatch(pokedexFetchRequestfailure(error.data.data)))
+            .catch(error => dispatch(pokedexFetchRequestFailure(error.data.data)))
+    }
+}
+
+export const searchPokedex = (data) => {
+    return dispatch => {
+        dispatch(pokedexSearchFetchRequest());
+        return fetch(`https://pokeapi.co/api/v2/${data.para}/${data.poke}`)
+            .then(response => response.json())
+            .then(response => {
+                if (response) {
+                    console.log('response :>> ', response);
+                    message.success('Fetched Sucessfully.');
+                    dispatch(pokedexSearchFetchRequestSuccess(response))
+                    // dispatch(pokedexDetailCleanRequest)
+                }
+                else {
+                    message.warning('Please Try Again.');
+                }
+            })
+            .catch(error => dispatch(pokedexSearchFetchRequestFailure(error.data.data)))
     }
 }
 
@@ -27,10 +49,9 @@ export const fetchPokedexDetail = (url) => {
                     dispatch(pokedexDetailFetchRequestSuccess(response))
                 }
                 else {
-                    //
-                    console.log('Error :>>');
+                    message.warning('Please Try Again.');
                 }
             })
-            .catch(error => dispatch(pokedexDetailFetchRequestfailure(error.data.data)))
+            .catch(error => dispatch(pokedexDetailFetchRequestFailure(error.data.data)))
     }
 }

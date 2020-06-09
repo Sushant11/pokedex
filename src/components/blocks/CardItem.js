@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from 'react';
-import { Card, Divider, Modal } from 'antd';
+import { Card, Divider } from 'antd';
 
 import PokedexModal from './Modal';
 
@@ -9,7 +9,6 @@ const CardItem = props => {
 
     const handleClick = () => {
         setModalOpen(true);
-        // console.log('data[index] :>> ', data[index].base_experience);
     }
 
     const handleCancel = () => {

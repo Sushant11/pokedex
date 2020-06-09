@@ -86,3 +86,13 @@
   min-width: 100%;
   margin: 8px 0;
 }
+
+.ant-modal-title {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 22px;
+  word-wrap: break-word;
+}
