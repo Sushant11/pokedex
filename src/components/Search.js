@@ -14,7 +14,6 @@ const PokeballIcon = props => <Icon component={pokeSvg} {...props} />
 
 const Search = (props) => {
     const {searchPokedex, cleanPokedex, cleanPokedexArray} = props
-    console.log('props :>> ', props);
 
     const onFinish = (values) => {
         let formdata = values
