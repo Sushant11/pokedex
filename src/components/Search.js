@@ -17,9 +17,15 @@ const Search = (props) => {
     console.log('props :>> ', props);
 
     const onFinish = (values) => {
+        let formdata = values
+
         cleanPokedex();
         cleanPokedexArray();
-        searchPokedex(values)
+        
+        formdata = values 
+        formdata.poke = values.poke && values.poke.toLowerCase();
+
+        searchPokedex(formdata)
     }
     return (
         <Card bordered='false' className='searchCard animate__animated animate__fadeIn animate__delay-1s'>
