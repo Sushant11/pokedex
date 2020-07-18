@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://user-images.githubusercontent.com/11186378/87174448-e6507f80-c2f6-11ea-92d9-176419c4f3d8.png" width="100" />
+  <img alt="Logo" src="https://user-images.githubusercontent.com/11186378/87845013-cfa3bd00-c8e2-11ea-8e17-d95bdf104eda.png" width="100" />
 </div>
 <h1 align="center">
   Pokedex
