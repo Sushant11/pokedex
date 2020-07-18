@@ -25,7 +25,7 @@
 3. Install dependencies
 
    ```sh
-   npm
+   npm install
    ```
 
 4. Start the development server
