@@ -10,11 +10,7 @@
 
 ## 🛠 Installation & Set Up
 
-1. Install Node & NPM
-
-   ```sh
-   <a href="https://nodejs.org/en/download/" target="_blank">Node Installation</a>
-   ```
+1. Install [Node & NPM](https://nodejs.org/en/download/)
 
 2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
 
