@@ -8,6 +8,10 @@
   Frontend for  <a href="https://pokeapi.co/" target="_blank">Poke Api</a> built with <a href="https://reactjs.org/" target="_blank">React</a> / <a href="https://redux.js.org/" target="_blank">redux</a> and hosted with <a href="http://vercel.com/" target="_blank">Vercel</a>
 </p>
 
+## 💥 Bootstrapped With
+
+ 1. [Create React App](https://create-react-app.dev/docs/getting-started/)
+
 ## 🛠 Installation & Set Up
 
 1. Install [Node & NPM](https://nodejs.org/en/download/)
