@@ -45,6 +45,7 @@ body,
   box-shadow: 0px 2px 4px hsla(0, 0%, 0%, 0.2);
   text-align: center;
   border-radius: 5px !important;
+  cursor: pointer;
 }
 
 .poke-card:hover {
@@ -72,35 +73,50 @@ body,
   text-align: center;
 }
 
-.basicInfo{
+.basicInfo {
   display: flex;
   justify-content: space-evenly;
+  background-color: #8080801a;
+  padding: 16px 0;
+  border-radius: 9px;
 }
 
-.stats{
+.stats {
   flex-grow: 1;
 }
 
-.type sup{
+.type sup {
   background-color: #52c41a;
   margin: 0 5px;
 }
 
-.info{
+.info {
   margin: 10px;
+  font-weight: 600;
 }
 
-@media only screen and (max-width : 1200px){
-  .searchCard{
+.empty{
+  margin:2rem 0;
+  width: 20rem;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  box-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.1);
+}
+
+@media only screen and (max-width: 1200px) {
+  .searchCard {
     width: 60vw;
   }
 }
 
-@media only screen and (max-width : 600px){
-  .searchCard{
+@media only screen and (max-width: 600px) {
+  .searchCard {
     width: 90vw;
   }
-  .main-logo img{
+  .main-logo img {
     width: 60%;
   }
 }

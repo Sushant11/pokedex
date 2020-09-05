@@ -10,7 +10,7 @@ const antIcon = <LoadingOutlined style={{ fontSize: 24, color: '#222c81' }} spin
 
 
 const Main = props => {
-    const { pokedexes, pokedexDetails, pokedexDetailLoading, fetchPokedexDetail, pokedexArrayStoreRequest, pokedexArray, pokedexSearches, pokedexSearchLoading, cleanPokedexDetail } = props
+    const { pokedexes, pokedexDetails, pokedexDetailLoading, fetchPokedexDetail, pokedexArrayStoreRequest, pokedexArray, pokedexSearches } = props
     const [detailsArray, setDetailsArray] = useState([])
 
     useEffect(() => {

@@ -5,7 +5,6 @@ import PokedexModal from './Modal';
 
 const CardItemIndividual = props => {
     const {data} = props
-    console.log('data :>> ', data);
     const [modalOpen, setModalOpen] = useState(false)
 
     const handleClick = () => {

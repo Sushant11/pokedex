@@ -34,7 +34,7 @@ export const searchPokedex = (data) => {
                     message.warning('Please Try Again.');
                 }
             })
-            .catch( error => message.warning('Pokemon Not Found!'),5000)
+            .catch( error => message.warning('Pokemon Not Found! Please try again.'),5000)
     }
 }
 
