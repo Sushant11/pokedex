@@ -4,7 +4,7 @@ import { Card, Divider } from 'antd';
 import PokedexModal from './Modal';
 
 const CardItem = props => {
-    const { i, index, data } = props
+    const { i, index, data, key } = props
     const [modalOpen, setModalOpen] = useState(false)
 
     const handleClick = () => {
@@ -23,7 +23,7 @@ const CardItem = props => {
                 <Divider />
                 <p className='pokeName'>{i.name}</p>
             </Card>
-            <PokedexModal modalOpen={modalOpen} handleCancel={handleCancel} data={data[index]} />
+            <PokedexModal modalOpen={modalOpen} handleCancel={handleCancel} key={key} data={data[index]} />
         </Fragment>
     );
 };

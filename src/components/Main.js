@@ -12,7 +12,6 @@ const antIcon = <LoadingOutlined style={{ fontSize: 24, color: '#222c81' }} spin
 const Main = props => {
     const { pokedexes, pokedexDetails, pokedexDetailLoading, fetchPokedexDetail, pokedexArrayStoreRequest, pokedexArray, pokedexSearches } = props
     const [detailsArray, setDetailsArray] = useState([])
-    console.log(pokedexArray)
     useEffect(() => {
         if (pokedexes && pokedexes.length !== 0) {
             pokedexes.forEach(element => {
@@ -28,9 +27,6 @@ const Main = props => {
     if (finalPokedexes && finalPokedexes.length === 20) {
         pokedexArrayStoreRequest(finalPokedexes)
     }
-
-    console.log('pokedexArray :>> ', pokedexArray);
-
 
     return (
         <div className='main'>
