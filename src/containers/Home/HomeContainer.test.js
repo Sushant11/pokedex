@@ -25,7 +25,6 @@ const INITIAL_STATE = {
 }
 
 const url = '/'
-const data = []
 
 let wrapper, store;
 
